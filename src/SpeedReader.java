@@ -68,12 +68,7 @@ public class SpeedReader {
 		}
 		String wordCount = Integer.toString(text.getWordCount());
 		String sentenceCount = Integer.toString(text.getSentenceCount());
-		// print out the word count and sentence count to the panel
-		wordCentered("Words:" + wordCount, metrics, width, height, g);
-		Thread.sleep(2000);
-		panel.clear();
-		wordCentered("Sentences:" + sentenceCount, metrics, width, height, g);
-		Thread.sleep(2000);
-		panel.clear();
+		System.out.println("Number of word: " + wordCount);
+		System.out.println("Number of sentences: " + sentenceCount);
 	}
 }

@@ -18,7 +18,6 @@ public class SpeedReader {
 	public static void wordCentered (String word, FontMetrics metrics, int width, int height, Graphics g) {
 		int fontCenter = (metrics.getAscent() + (height - (metrics.getAscent() + metrics.getDescent())) / 2);
 		g.setColor(Color.black);
-		/*g.drawString(word, width/2-advance/2, fontCenter);*/	
 		int wordPosition;
 		if (word.length() <= 2) {
 			wordPosition = 0;
@@ -60,6 +59,7 @@ public class SpeedReader {
 		FontMetrics metrics = g.getFontMetrics(f);
 		g.setFont(f);
 		WordGenerator text = new WordGenerator(fileName);
+		// loop to display all the words in the text file
 		while (text.hasNext()) {
 			String display = text.next();
 			wordCentered (display, metrics, width, height, g);
@@ -68,6 +68,7 @@ public class SpeedReader {
 		}
 		String wordCount = Integer.toString(text.getWordCount());
 		String sentenceCount = Integer.toString(text.getSentenceCount());
+		// print out the word count and sentence count to the panel
 		wordCentered("Words:" + wordCount, metrics, width, height, g);
 		Thread.sleep(2000);
 		panel.clear();

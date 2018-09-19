@@ -1,6 +1,5 @@
-Homework 2: Speed Reader
+Speed Reader
 
-Members:
 Linh Bui
 Xinya Yang
 Joel Tibbetts
